@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <style>
+        .myElement{
+            width: 300px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+        }
+        .greenBg{
+            background-color: green;
+        }
+        .redBg{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="myElement greenBg">
+        <p>Buon Anno</p>
+    </div>
+    <div class="myElement greenBg">
+        <p>Buon Anno</p>
+    </div>
+    <div class="myElement greenBg">
+        <p>Buon Anno</p>
+    </div>
+    <div class="myElement green">
+        <p>Buon Anno</p>
+    </div>
+
+    <script>
+        let elements = document.querySelectorAll(".myElement") 
+
+        for (let i = 0; i < elements.length; i++){
+            let el = elements[i]
+            el.addEventListener("click", function(event){
+                el.classList.toggle("greenBg")
+                el.classList.toggle("redBg")
+            })
+        }
+    </script>
+</body>
+</html>
